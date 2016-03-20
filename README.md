@@ -1,5 +1,5 @@
 # CourseProjects
-Projects in multiple courses, operating system, algorithms, data structure
+Projects in multiple courses, operating system, algorithms, data structure.
 
 多个课程中设计到的课程项目，AddressBook 是算法课，ThreadOperationInOS 是操作系统课，DevelLanguage 是数据结构。
 
