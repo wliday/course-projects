@@ -4,6 +4,7 @@
 
 ### Problem
 Determine the 
+
 1. central person(s) in the graph
 2. longest path
 3. largest clique
