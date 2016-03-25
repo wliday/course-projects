@@ -1,7 +1,7 @@
 # Course Projects
 Projects in multiple courses, operating system, algorithms, data structure, big data & analytics.
 
-多个课程中涉及到的课程项目，AddressBook 是算法课，ThreadOperationInOS 是操作系统课，DevelLanguage 是数据结构。
+多个课程中涉及到的课程项目，Social Network Analysis 是大数据分析可，Address Book 是算法课，Thread Operation In OS 是操作系统课，Devel Language 是数据结构。
 
 #### [Social Network Analysis [R]](https://github.com/wliday/course-projects/tree/master/SocialNetworkAnalysis)
 Project in Big Data & Analytics, using R to find out the specific person with limited conditions. Involved central person, longest path, largest clique, ego, power centrality.
