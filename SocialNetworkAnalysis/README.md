@@ -4,11 +4,11 @@
 
 ### Problem
 Determine the 
-- 1 central person(s) in the graph
-- 2 longest path
-- 3 largest clique
-- 4 ego
-- 5 power centrality. 
+1. central person(s) in the graph
+2. longest path
+3. largest clique
+4. ego
+5. power centrality. 
 
 ### Solutions
 We use "igraph" package to handle graph.
