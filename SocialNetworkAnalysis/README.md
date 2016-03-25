@@ -112,21 +112,28 @@ sort(result) #result 6
 
 ```
 
-### Instruction
-1. Path length based on edges' weight or just the number of edges?
-based on the number of edges between vertex a and vertex b remembering that there should be no circuits or loops.
+### Instructions
+##### Q: 1. Path length based on edges' weight or just the number of edges?
 
-2. what is power centrality?
-Power centrality encompasses the idea that an individual's power is the sum of the power of its neighbors - which may be positive or negative. This concept is applied recursively and computed for every node.
+A: Based on the number of edges between vertex a and vertex b remembering that there should be no circuits or loops.
+
+##### Q: 2. what is power centrality?
+
+A: Power centrality encompasses the idea that an individual's power is the sum of the power of its neighbors - which may be positive or negative. This concept is applied recursively and computed for every node.
 See bonpow in the contributed extensions directory for a routine that computes power centrality.
 
-3. ego: find biggest immediate neighborhood (of a single vertex)
-Ego-centrality is similar to or equal to betweenness centrality depending on the reference you consult.
+##### 3. ego: find biggest immediate neighborhood (of a single vertex)
+
+A: Ego-centrality is similar to or equal to betweenness centrality depending on the reference you consult.
+
 Betweenness centrality is a measure of the number of indegree edges to a vertex, usually without regard to any weighting.
+
 Ego-centrality has sometimes been defined as the sum of the weights associated with the indegree edges suitably normalized (such as to whole numbers). The latter must be done with the same scaling factor for all edges in the graph.
 
-4. central person is the person with most connections (largest degree)
+##### Q: 4. central person is the person with most connections (largest degree)
+
 The central person could be defined as the person with the most edges = sum of indegree and outdegree.
+
 It could also be defined as the person(s) with the highest betweenness centrality.
 Note: for complex graphs, there may be many such people with the highest betweenness centrality. Then, other rules and measures must be applied to decide who is mot central.
 
