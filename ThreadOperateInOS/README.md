@@ -11,9 +11,9 @@
 
 ##### Course Project in Operating System
 
-Project contains, creating, withdraw  of thread，first-come-first-served，time around， semaphore implementation.
+Project contains, creating, withdraw  of thread，first-come-first-served，time around，semaphore implementation.
 
 Runtime Environment: Trubo C
 
-Created on: 2011
+Created in: 2011
 
