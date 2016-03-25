@@ -122,7 +122,7 @@ A: Based on the number of edges between vertex a and vertex b remembering that t
 A: Power centrality encompasses the idea that an individual's power is the sum of the power of its neighbors - which may be positive or negative. This concept is applied recursively and computed for every node.
 See bonpow in the contributed extensions directory for a routine that computes power centrality.
 
-##### 3. ego: find biggest immediate neighborhood (of a single vertex)
+##### Q: 3. ego: find biggest immediate neighborhood (of a single vertex)
 
 A: Ego-centrality is similar to or equal to betweenness centrality depending on the reference you consult.
 
