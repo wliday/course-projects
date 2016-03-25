@@ -113,16 +113,16 @@ sort(result) #result 6
 ```
 
 ### Instructions
-##### Q: 1. Path length based on edges' weight or just the number of edges?
+##### Q: Path length based on edges' weight or just the number of edges?
 
 A: Based on the number of edges between vertex a and vertex b remembering that there should be no circuits or loops.
 
-##### Q: 2. what is power centrality?
+##### Q: What is power centrality?
 
 A: Power centrality encompasses the idea that an individual's power is the sum of the power of its neighbors - which may be positive or negative. This concept is applied recursively and computed for every node.
 See bonpow in the contributed extensions directory for a routine that computes power centrality.
 
-##### Q: 3. ego: find biggest immediate neighborhood (of a single vertex)
+##### Q: ego: find biggest immediate neighborhood (of a single vertex)
 
 A: Ego-centrality is similar to or equal to betweenness centrality depending on the reference you consult.
 
@@ -130,7 +130,7 @@ Betweenness centrality is a measure of the number of indegree edges to a vertex,
 
 Ego-centrality has sometimes been defined as the sum of the weights associated with the indegree edges suitably normalized (such as to whole numbers). The latter must be done with the same scaling factor for all edges in the graph.
 
-##### Q: 4. central person is the person with most connections (largest degree)
+##### Q: central person is the person with most connections (largest degree)
 
 The central person could be defined as the person with the most edges = sum of indegree and outdegree.
 
