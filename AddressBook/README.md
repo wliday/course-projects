@@ -24,9 +24,9 @@ Since the source file,「HugeAddressBook.csv」, needs enough memory in JVM. So 
 
 
 ### Storage Structure:
-1) I create three models, search engine module, cache model to store data, Trie implementation to provide storage structure.
-2) For the cache module,  all data [350,000 records] stores in a HashMap, the key is id, and value is a JavaBean with complete contact information.
-3) Build four prefix trees (Trie) , FirstNameTrie LastNameTrie, PhoneNumberTrie, CompanyNameTrie, to store id in HashMap.
+1. I create three models, search engine module, cache model to store data, Trie implementation to provide storage structure.
+2. For the cache module,  all data [350,000 records] stores in a HashMap, the key is id, and value is a JavaBean with complete contact information.
+3. Build four prefix trees (Trie) , FirstNameTrie LastNameTrie, PhoneNumberTrie, CompanyNameTrie, to store id in HashMap.
 
 Contact information needs to preload in the cache[350, 000 records, 6ms].  Search time taken is log(len(type-letters)), approximately ascertain result in O(1) time.
 
