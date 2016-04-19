@@ -24,9 +24,11 @@ Since the source file,「HugeAddressBook.csv」, needs enough memory in JVM. So 
 
 
 ### Storage Structure:
-1. Build four Tries, FirstNameTrie, LastNameTrie, PhoneNumberTrie, CompanyNameTrie.
-2. All the records storage in a HashMap, <Key, AddressRecordBean>
-3. Each TrieNode store one key of records, and then get AddressRecordBean from the map.
+1) I create three models, search engine module, cache model to store data, Trie implementation to provide storage structure.
+2) For the cache module,  all data [350,000 records] stores in a HashMap, the key is id, and value is a JavaBean with complete contact information.
+3) Build four prefix trees (Trie) , FirstNameTrie LastNameTrie, PhoneNumberTrie, CompanyNameTrie, to store id in HashMap.
+
+Contact information needs to preload in the cache[350, 000 records, 6ms].  Search time taken is log(len(type-letters)), approximately ascertain result in O(1) time.
 
 ### Search Process:
 The primary process is, search engine get key in Trie, and then get address record from the Map<Key, AddressRecordBean>
@@ -35,38 +37,39 @@ The primary process is, search engine get key in Trie, and then get address reco
 When I use JDK 1.6, the load time of huge time is about 9~10s; and when I update to JDK 1.8, the load time reduces to 5s.
 
 ### User Interface
+```shell
 Welcome to Addressbook, initialized!
 
 Which database would you want to choose? Please enter the instruction number as following:
 
->
->1. Small AddressBook
->2. Medium AddressBook
->3. Large AddressBook
->4. Huge AddressBook
+1. Small AddressBook
+2. Medium AddressBook
+3. Large AddressBook
+4. Huge AddressBook
 
->4
+> 4
 
->System is Loading Huge AddressBook, estimate 5 ~ 6s.
+System is Loading Huge AddressBook, estimate 5 ~ 6s.
 
->F
+> F
 
->Data load consume 5368 ms.
+Data load consume 5368 ms.
 
->What would you like to search on ?(F,L,P,C)
+What would you like to search on ?(F,L,P,C)
 
->Enter the first name:
+Enter the first name:
 
->Es
+> Es
 
->in total 1278 records.
+in total 1278 records.
 
->Esperanza, Mildon, 810-664-8413,Weiss Berzowski Brady
+Esperanza, Mildon, 810-664-8413,Weiss Berzowski Brady
 
->Essie, Cambi, 908-526-4077,Hyde Bernard T
+Essie, Cambi, 908-526-4077,Hyde Bernard T
 
->...
+...
 
->1278 records load complete.
+1278 records load complete.
 
->Another Search?(Y, N)
+Another Search?(Y, N)
+```
